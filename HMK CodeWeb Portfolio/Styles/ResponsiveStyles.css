@@ -1,0 +1,177 @@
+@media screen and (max-width: 1000px) {
+  .Hide-BG {
+    width: 80%;
+  }
+  #MyServicesSection {
+    padding: 10px 20px;
+  }
+  #ServicesCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  #ProjectsImgContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .container {
+   min-height: 200vh;
+    gap: 10% 5%;
+    background: #cfd1e1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #ProgessHeading h1 {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  #NavbarItems {
+    display: none !important;
+  }
+  #NavbaarHumburger {
+    scale: 1 !important;
+  }
+  #LogoName {
+    width: 150px;
+  }
+  #AnimationHumburger {
+    display: none;
+  }
+  #NavbarItems {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    text-align: left;
+    gap: 4vw;
+    cursor: pointer;
+  }
+  #NameHeading {
+    font-size: 8vw;
+  }
+  #SomeExperinceBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  #HeadingAndContentOfOurProject {
+    width: 80%;
+    padding: 10px;
+  }
+  #ContactInfoAndFromContainer {
+    padding: 10% 0%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #ABOUTUSDiv {
+    display: block;
+  }
+  #AboutMeInfo {
+    padding: 40px 50px;
+  }
+  #AboutMeIMG {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #CustomerInfoCards {
+    gap: .5em;
+    padding: 0px;
+  }
+  .CustomerCards{
+    width: 50%;
+    padding: 10px;
+
+  }
+  #MoverCircleBTNThree{
+    display: block;
+  }
+}
+@media screen and (max-width:720px) {
+  #ContactInfoAndFromContainer {
+  display: block;
+  }
+  #ContactInfo{
+    width: 100%;
+ 
+  }
+#ContactForm {
+  width: 100%;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+  #ServicesCardContainer {
+    display: block;
+  }
+  #HeadingAndContentOfOurProject {
+    width: 100%;
+    padding: 10px;
+  }
+  #ProjectsImgContainer {
+   display: block;
+  }
+  .ProjectsCards{
+    margin-top: 60px;
+  }
+  .ServicesCards {
+    margin-top: 20px;
+  }
+  .OnHoverEffect{
+   position: relative;
+   transition: 1s;
+   cursor: pointer;
+   width: fit-content;
+   height: fit-content;
+  
+ }
+ .OnHoverEffect:hover{
+  transform: rotate3d(0, 1, 0, 360deg);
+ 
+  
+ }
+}
+
+/* 540*/
+@media screen and (max-width: 540px) {
+  .container {
+    overflow: hidden;
+    background: #cfd1e1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+  }
+  #ProgessHeading h1 {
+    font-size: 6vw;
+  }
+  #ContactUsSection{
+    padding: 0PX;
+  }
+  #FeedbackHeadingAndContent {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #MainHeadingDiv {
+    width: 100%;
+  }
+  .CustomerIMG{
+    display: none;
+  }
+}

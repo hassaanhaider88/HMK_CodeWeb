@@ -1,0 +1,794 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+   font-family: "Radio Canada Big", sans-serif
+}
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+*::selection {
+  color: white;
+  background-color: #2bfdcd;
+}
+
+#DivOfWhatsAppImg{
+  z-index: 100;
+  padding:10px;
+  position:fixed;
+  bottom:5%;
+  right:5%;
+  transition: 1.5s;
+  scale: 0;
+}
+.whatsapp-chat img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#NavBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh 3vw;
+  font-size: 19px;
+  font-weight: 700;
+  position: fixed;
+  z-index: 10;
+  /* overflow: hidden; */
+}
+#LogoName {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  width: 135px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+#LogoHeadingOne {
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  transform: translate(0px, 0px);
+  transition: 2s;
+}
+
+.LogoDot {
+  font-size: 33px;
+  font-weight: 800;
+  color: #2bfdcd;
+}
+#LogoHeadingTwo {
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  bottom: -100%;
+  transition: 2s;
+}
+#MainNavbarItems {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  cursor: pointer;
+}
+#NavbarItems {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  transition: 2s;
+  position: relative;
+  top: 0px;
+}
+#NavbarItemsTwo {
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  gap: 4vw;
+  transition: 1s;
+  position: absolute;
+  top: 0px;
+  top: 100%;
+  scale: 0;
+  width: fit-content;
+  height: fit-content;
+  background: white;
+  padding: 30px;
+  margin-left: -24px;
+  border-bottom-right-radius: 50px;
+}
+.NavBarItem::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0ab174;
+  display: block;
+  transition: 0.8s;
+}
+
+.Rotate {
+  transform: rotate(180deg);
+}
+.NavBarItem:hover::after {
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+#AnimationHumburger {
+  font-size: 25px;
+  font-weight: 700;
+  scale: 0;
+  transition: 1.5s;
+  animation-name: TOPBTN;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+#NavbaarHumburger {
+  font-size: 25px;
+  font-weight: 700;
+  scale: 0;
+  transition: 1.5s;
+}
+#AnimationHumburger i{
+  background: transparent;
+}
+
+#NavbaarHumburger i{
+  background: transparent;
+}
+@keyframes TOPBTN {
+  0% {
+    top: 0px;
+    /* transform: scaleY(1); */
+  }
+  100% {
+    /* transform: scaleY(1.5); */
+    top: 6px;
+  }
+}
+
+#HeroSection {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/assets/BGONE.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  justify-content: center;
+}
+#MainHeadingDiv {
+  width: 100%;
+  height: 60%;
+  padding: 20px 30px;
+  text-align: center;
+        /* font-size: 48px; */
+}
+#HelloHeading {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: -10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#NameHeading {
+  font-size: 5vw;
+  font-family: 'Courier New', "Courier", "monospace";
+  word-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+overflow-wrap:nowrap;
+white-space: nowrap;
+/* font-family: 'Tangerine', serif; */
+        /* font-size: 48px; */
+}
+#NameHeading h1{
+  animation-name: NameHeadingAnim;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes NameHeadingAnim {
+  0% {
+    letter-spacing: 7em;
+
+  }
+  100% {
+    letter-spacing: 0em;
+
+  }
+}
+#SomeAboutPara {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#GetStartedBTN button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #3feb82, #3cf2b4, #3af7d2);
+  border: none;
+  box-shadow: 5px 6px 10px gray;
+  transition: 1.2s;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+}
+#GetStartedBTN button:hover {
+  background: linear-gradient(to right, #5ed68c, #2ee0a5, #2fdfbc);
+  scale: 0.9;
+}
+
+#AboutMeSection {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+#ABOUTUSDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#AboutMeInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 30px 40px;
+}
+.ParaInAboutSec{
+  font-weight: 550;
+  position: relative;
+  transition: 3s;
+}
+ #GetStartedBTNInAboutSec{
+  position: relative;
+transition: 5s;
+} 
+#GetStartedBTNInAboutSec button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #3feb82, #3cf2b4, #3af7d2);
+  border: none;
+  box-shadow: 5px 6px 10px gray;
+  transition: 1.2s;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+  margin-top: 25px;
+}
+#GetStartedBTNInAboutSec button:hover {
+  background: linear-gradient(to right, #5ed68c, #2ee0a5, #2fdfbc);
+  scale: 0.9;
+
+}
+
+#NameInAboutMeSec {
+  opacity: 0;
+  transition: 2s;
+}
+#NameInAboutMeSec h1 {
+  font-weight: 750;
+  font-size: 33px;
+}
+#LineOfAboutMe {
+  width: 0%;
+/* overflow-wrap: nowrap; */
+white-space:nowrap;
+  overflow: hidden;
+  animation-name: SlidName;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+@keyframes SlidName {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+#LineOfAboutMe p {
+  font-weight: 700;
+  font-size: 20px;
+}
+#LineOfAboutMe svg {
+  margin-bottom: -3px;
+}
+
+#AboutMeIMG {
+  height: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  padding-top: 30px;
+}
+
+.Hide-BG {
+  width: 60%;
+  height: 60%;
+  margin-top: 20px;
+  transition: 5s;
+position: relative;
+  background-color: transparent;
+}
+
+
+#SomeExperinceBlock {
+  margin-top: 60px !important;
+  width: 90%;
+  transition: 2s;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10px;
+  box-shadow: 3px 6px 15px gray;
+  cursor: pointer;
+}
+#SomeExperinceBlock:hover {
+  scale: 0.94;
+  box-shadow: none;
+}
+#SomeExperinceBlock h1 {
+  text-align: center;
+  padding: 5px;
+  transition: 2s;
+}
+
+#SomeExperinceBlock h1:hover {
+  scale: 1.2;
+}
+#ServicesHeadings{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 100px;
+}
+#ServicesHeadings h1{
+  font-size: 40px;
+  font-weight: 650;
+  letter-spacing: 600px;
+  white-space: nowrap;
+  transition: 3s;
+}
+#ServicesHeadings p{
+font-size: 20px;
+font-weight: 500;
+text-align: center;
+transition: 3s;
+scale: 0;
+}
+
+
+#MyServicesSection {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7f7;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+#ServicesCardContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 50px;
+  perspective-origin: center center;
+  perspective: 800px;
+}
+.ServicesCardsOne{
+  left: -120%;
+  /* transition: 6s; */
+}
+.ServicesCardsTwo{
+  top: -120%;
+  /* transition: 10s; */
+}
+.ServicesCardsThree{
+ right:  -120%;
+  /* transition: 14s; */
+}
+.ServicesCardsFour{
+  left: -120%;
+  /* transition: 18s; */
+}
+.ServicesCardsFive{
+  top: -240%;
+  /* transition: 22s; */
+}
+.ServicesCardsSix{
+  right: -120%;
+  /* transition: 24s; */
+}
+.ServicesCards{
+  padding: 10px 25px;
+  text-align: center;
+  background: white;
+  cursor: pointer;
+  transition: 1.5s ease-in;
+  border-radius: 10px;
+  box-shadow: 3px 6px 10px gray inset;
+  position: relative;
+
+}
+.ServicesCards:hover {
+  background-color: #39f7d6;
+  color: white;
+  transform: rotate3d(1, 0, 0, 8deg);
+  box-shadow: 3px 6px 10px gray;
+}
+.ServicesCards:hover svg,i {
+  background-color: #ffffff;
+  fill: #39f7d6;
+}
+
+a{
+  text-decoration: none;
+}
+.IconInSeerviceSec svg {
+  transition: 0.6s ease-in;
+  width: 45%;
+  height: 45%;
+  padding: 10px;
+  border: 1px solid #39f7d6;
+  border-radius: 50%;
+  background: #39f7d6;
+}
+
+.IconInSeerviceSec i{
+  transition: 0.6s ease-in;
+  /* width: 45%;
+  height: 45%; */
+  font-size:6em;
+  padding: 10px;
+  border: 1px solid #39f7d6;
+  border-radius: 50%;
+  background: #39f7d6;
+}
+
+
+.HeadingInServiceSec h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.DescInServiceSec p {
+  font-weight: 600;
+}
+
+#PregressSection {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7f7;
+  padding-top: 10%;
+}
+#ProgessSecContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+}
+#ProgessHeadingAndContant {
+  width: 100%;
+  padding: 40px 40px;
+  
+}
+#ProgessHeading h1 {
+  font-size: 2.2vw;
+  font-weight: 700;
+  transition: 1.5s;
+  opacity: 0;
+}
+#ProgessContentPara {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  scale: 0;
+  transition: 2s;
+}
+
+.langName {
+  font-weight: 600;
+  color: #0ece8e;
+}
+#BTNInProgessSecBTN{
+  padding: 10px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  background: linear-gradient(to right, #3feb82, #3cf2b4, #3af7d2);
+  border: none;
+  box-shadow: 5px 6px 10px gray;
+  transition: 2s;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+  right: -150%;
+}
+#BTNInProgessSecBTN:hover {
+  background: linear-gradient(to right, #5ed68c, #2ee0a5, #2fdfbc);
+  scale: 0.9;
+}
+
+#ProgessSecBars {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 30px;
+  gap: 0px 4%;
+  background: #e7e7e7;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  perspective-origin: center center;
+  perspective: 800px;
+  overflow: hidden;
+}
+.OnHoverEffect{
+  position: relative;
+  transition: 1s;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  
+}
+.OnHoverEffect:hover {
+  scale: 0.9;
+}
+#OnHoverEffectOne{
+  position: relative;
+  left: -100%;
+  transition: 2s;
+}
+
+#OnHoverEffectTwo{
+  position: relative;
+  top: -100%;
+  transition: 2s;
+}
+#OnHoverEffectThree{
+  position: relative;
+  right: -120%;
+  transition: 2s;
+}
+#OnHoverEffectFour{
+  position: relative;
+  left: -100%;
+  transition: 2s;
+}
+#OnHoverEffectFive{
+  position: relative;
+  bottom: -120%;
+  transition: 2s;
+}
+#OnHoverEffectSix{
+  position: relative;
+  right: -120%;
+  transition: 2s;
+}
+
+.box {
+  position: relative;
+  width: 240px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(#fff, #fff, #e3e3e3);
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  width: 20px;
+  height: 100%;
+  background: #c4c3c3;
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.box .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dfdfdf;
+}
+
+.box .shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% + 5px);
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(rgba(0, 0, 0, 0.055), transparent);
+  transform: skewX(45deg);
+}
+
+.box .shadow::after {
+  content: "";
+  position: absolute;
+  bottom: -200%;
+  left: calc(100% + 15px);
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(rgba(0, 0, 0, 0.075), transparent);
+  transform: skewX(45deg);
+}
+
+.box .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#dbdae1, #a3aaba);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 15px 15px 15px rgba(0, 0, 0, 0.1),
+    20px 20px 20px rgba(0, 0, 0, 0.1), 50px 50px 50px rgba(0, 0, 0, 0.1),
+    inset 3px 3px 2px #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .content .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.box .content .percent::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 20px;
+  background: #555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2bfdcd;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.box .content .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+.box .content .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3;
+  stroke: rgba(0, 0, 0, 0.05);
+  transform: translate(5px, 5px);
+}
+
+.box .content .percent svg circle:nth-child(2) {
+  stroke: #555;
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.box .content .percent .dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.box .content .percent .dot::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #555;
+  border-radius: 50%;
+}
+
+.box .content .number {
+  position: relative;
+  inset: 0;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.box .content .number h2 {
+  font-size: 2.5rem;
+  color: #555;
+}
+
+.box .content .number h2 span {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+
+#ShowDialog{
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  overflow: hidden;
+  margin: auto;
+  border: none;
+  font-size: 20px;
+  /* position: relative; */
+}
